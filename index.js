@@ -18,7 +18,7 @@ app.use(express.json());
 
 
 app.use("/admin", AdminRouter); 
-app.use("/api/user", UserRouter); 
+app.use("/api/user", UserRouter);
 app.use("/api/photo", PhotoRouter); 
 app.use("/api/photo/commentsOfPhoto", CommentsRouter);
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));

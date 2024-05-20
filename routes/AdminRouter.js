@@ -20,6 +20,7 @@ router.post("/login", async (req, res) => {
 
     res.send({ token, user: { _id: user._id, first_name: user.first_name } });
   } catch (err) {
+    console.log("check error:", err)
     res.status(500).send({ error: "Internal server error" });
   }
 });

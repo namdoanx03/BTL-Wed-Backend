@@ -1,4 +1,3 @@
-// middleware/jwtAuth.js
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = 'your-secret-key';
 
@@ -14,6 +13,7 @@ function jwtAuth(req, res, next) {
     req.userId = payload.userId; // Attach userId to the request
     next();
   } catch (err) {
+    console.log(err);
     res.status(403).send({ error: "Forbidden" });
   }
 }
